@@ -1,11 +1,6 @@
-# add rbenv to path
-export PATH="/home/root/.rbenv/bin:$PATH"
+#!/bin/sh
 
-# set default env vars
-export RBENV_VERSION=2.1.5
-export RAILS_ENV=${RAILS_ENV:-test}
+export RBENV_ROOT="/usr/local/rbenv"
+export PATH="$RBENV_ROOT/bin:$PATH"
 
-# initialize and set ruby version
 eval "$(rbenv init -)"
-rbenv global 2.1.5
-
