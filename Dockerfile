@@ -16,11 +16,11 @@ RUN git clone https://github.com/sstephenson/rbenv.git /usr/local/rbenv
 RUN git clone https://github.com/sstephenson/ruby-build.git /usr/local/rbenv/plugins/ruby-build
 
 # ruby install
-RUN CC=gcc rbenv install 2.1.5
-# RUN bash -lc 'rbenv install 2.1.5'
+RUN bash -lc 'export CC=gcc'
+RUN bash -lc 'rbenv install 2.1.2'
 
 # bundler
-RUN bash -lc 'rbenv global 2.1.5; gem install rbenv-rehash'
-RUN bash -lc 'rbenv global 2.1.5; gem install bundler'
-RUN bash -lc 'export RBENV_VERSION=2.1.5'
+RUN bash -lc 'rbenv global 2.1.2; gem install rbenv-rehash'
+RUN bash -lc 'rbenv global 2.1.2; gem install bundler'
+RUN bash -lc 'export RBENV_VERSION=2.1.2'
 RUN bash -lc 'rbenv rehash'
